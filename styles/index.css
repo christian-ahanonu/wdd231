@@ -136,6 +136,7 @@ main {
     text-align: center;
     height: 350px;
     margin-bottom: 25px;
+    margin-top: 20px;
     box-shadow: 2px 2px 5px #e1e1ea, -2px -2px 5px #e1e1ea;
     border-radius: 9px;
 }
