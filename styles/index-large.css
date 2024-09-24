@@ -60,6 +60,8 @@
     
     .tag-two {
         grid-column: 2/3;
+        margin-top: 0;
+
     }
     
     .courses-container {
