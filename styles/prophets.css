@@ -25,6 +25,7 @@ header {
 header h1 {
     line-height: 65px;
     color: white;
+    margin-top: 0;
 }
 
 
