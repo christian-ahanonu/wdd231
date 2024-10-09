@@ -53,6 +53,9 @@ function displayGrid(allCompanies) {
         phoneNo.textContent = allCompany.phoneNumbers;
         webAddress.textContent = allCompany.websitesUrls;
         webAddress.setAttribute("href", `${allCompany.webAddress}`);
+        webAddress.textContent = `Visit Site`;
+        webAddress.setAttribute("target", "_blank");
+        webAddress.setAttribute("style", "color:#319155;");
         
         container.appendChild(companyName);
         container.appendChild(address);

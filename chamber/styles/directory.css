@@ -45,7 +45,7 @@ a {
 
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 10px;
     justify-content: space-between;
     padding: 0 20px;
 
@@ -75,6 +75,11 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 15px 13px;
+}
+
+.nav-container span img {
+    width: 150px;
+    height: auto;
 }
 
 .nav-container .nav-links {

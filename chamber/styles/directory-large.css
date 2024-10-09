@@ -9,6 +9,12 @@
         max-width: 1200px;
     }
 
+    
+    .top-banner {
+        font-size: 14px;
+    }
+    
+    
     .nav-container {
         display: grid;
         grid: auto/1fr auto;
@@ -42,6 +48,11 @@
     .nav-container .nav-links a.active {
         /* text-decoration: underline black 3px; */
         color: var(--primary-color);
+    }
+
+    .nav-container span img {
+        width: 180px;
+        height: auto;
     }
 
 
