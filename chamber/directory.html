@@ -1,14 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce</title>
+    <meta name="author" content="Christian I. Ahanonu">
+    <meta name="decription" content="Abuja Chamber of Commerce directory page. 
+    A place for businesses to connect together. Find all members of the community.">
+
+    <meta property="og:title" content="Abuja Chamber of Commerce">
+    <meta property="og:description" content="Abuja Chamber of Commerce directory page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/home-page-photo">
+    <meta property="og:url" content="index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Directory | Abuja Chambers of Commerce </title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="images/icons/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css" media="screen">
+    <link rel="stylesheet" href="styles/directory.css" media="screen">
+    <link rel="stylesheet" href="styles/directory-large.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/lastmodified.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
 </head>
 
 <body>
+    <section class="top-banner">
 
+        <nav class="items-left">
+            <ul>
+                <li> <i class="fa-brands fa-facebook"></i> </li>
+                <li> <i class="fa-brands fa-twitter"></i> </li>
+                <li> <i class="fa-brands fa-linkedin"></i> </li>
+                <li>
+                    <p>(+234) 817-362-0785</p>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="items-right">
+            <ul>
+                <li> <a href="#">Contact Us</a> </li>
+                <li> <a href="#">Privacy Policy</a> </li>
+            </ul>
+        </nav>
+
+    </section>
+
+
+    <header>
+
+        <section class="nav-container">
+            <span>
+                <img src="images/acc_logo.svg" alt="Abuja Chambers of Commerce logo" width="180" height="71">
+                <span id="icon-menu"> </span>
+            </span>
+
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="active">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+        </section>
+
+    </header>
+
+
+    <main>
+        <section class="intro-msg-container">
+            <p>Abuja Chambers of Commerce was established in 2024 with the vision to build a community where
+                businesses can thrive, foster a community of growth, and contribute to economic development.
+                <br> <br>
+                Find all members of the Abuja Chamber of Commerce below;
+            </p>
+        </section>
+
+        <div class="list-grid-icons">
+            <button id="grid-btn"> <i class="fa fa-th"></i> </button>
+            <button id="list-btn"> <i class="fas fa-list"></i> </button>
+        </div>
+
+        <section id="comp-grid"></section>
+        <section id="comp-list"></section>
+
+    </main>
+
+
+    <footer>
+        <section class="footer-background">
+
+            <div class="footer-container">
+                <div class="sec-one">
+                    <p>Abuja Chamber of Commerce <br>
+                        No 3 Galadima Close, Garki <br>
+                        Abuja <br>
+                        <a href="#">info@abujacc.org</a><br>
+                        (+234) 817-362-0785
+                    </p>
+                </div>
+
+                <div class="sec-two">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+
+                <div class="sec-three">
+                    <p>WDD231 Web Development 1 Project
+                        <br>Brigham Young University - Idaho
+                        <br>Christian I. Ahanonu
+                    </p>
+                    <p id="lastModified"></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="footend-container">
+            <div class="footer-end">
+                <p><span id="currentYear">©</span> Abuja Chamber of Commerce | All rights reserved</p>
+                <p>Designed by Christian I. Ahanonu</p>
+            </div>
+        </section>
+
+    </footer>
 </body>
 
 </html>
