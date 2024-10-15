@@ -1,7 +1,10 @@
 @media screen and (min-width: 1000px) {
 
     .nav-container,
-    main,
+    .intro-msg-container,
+    .list-grid-icons,
+    #comp-grid,
+    #comp-list,
     .footer-end,
     .footer-container,
     .footer-container {
@@ -46,7 +49,6 @@
     }
 
     .nav-container .nav-links a.active {
-        /* text-decoration: underline black 3px; */
         color: var(--primary-color);
     }
 

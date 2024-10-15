@@ -7,7 +7,7 @@
 }
 
 :root {
-    --primary-color: #319155;
+    --primary-color: #2a7b48;
     --secondary-color: #FAEDFC;
     --accent-color1: #E6E6E6;
     --accent-color2: #F2F2F2;
@@ -22,7 +22,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-weight: 600;
+    /* font-weight: 600; */
     font-family: "Humanst521 BT", sans-serif;
 }
 
@@ -45,7 +45,7 @@ a {
 
     display: flex;
     align-items: center;
-    font-size: 10px;
+    font-size: 11px;
     justify-content: space-between;
     padding: 0 20px;
 
@@ -85,7 +85,6 @@ a {
 .nav-container .nav-links {
     text-align: center;
     background-color: var(--primary-color);
-    /* margin-top: 15px; */
     padding: 10px;
 }
 
@@ -96,8 +95,6 @@ a {
 }
 
 .nav-container .nav-links a.active {
-    /* text-decoration: underline black 3px; */
-    /* color: var(--primary-color); */
     color: black;
 }
 
@@ -133,7 +130,7 @@ a {
 
 #icon-menu.open::before {
     content: "\f00d";
-}
+} 
 
 .nav-links.open {
     display: block;
@@ -176,7 +173,6 @@ a {
     transition: .5s ease;
 
 }
-
 
 
 /* Grrid and List view styling  */
@@ -227,12 +223,6 @@ a {
 
 
 
-
-
-
-
-
-
 footer {
     margin-top: 50px;
 }
@@ -264,10 +254,12 @@ footer {
 }
 
 .sec-one a {
-    color: rgb(18, 18, 18);
+    color: white;
+    text-decoration: underline 2px white;
 }
 
 .sec-one a:hover {
-    text-decoration: underline 3px black;
+    text-decoration: underline 2px black;
+    color: black;
 }
 
