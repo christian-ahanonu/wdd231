@@ -10,25 +10,28 @@
     scroll-behavior: smooth;
 }
 
-#displayApp h1, #displayApp span p {
+#displayApp h1,
+#displayApp span p {
     text-align: center;
 }
 
 .infoContainer {
-    display: grid;
-    grid: auto/.6fr 1fr;
-    margin: 0 auto;
-    width: 600px;
+    display: flex;
     margin-top: 30px;
-    border: 1px solid lightgray;
-    grid-auto-flow: row;
+    justify-content: center;
 
 }
 
 
-#displayApp .sec1 p, #displayApp .sec2 p{
+#displayApp .sec1 p,
+#displayApp .sec2 p {
     padding: 8px;
     border-bottom: 1px solid lightgray;
+}
+
+#displayApp .sec1,
+#displayApp .sec2 {
+    border: 1px solid lightgray;
 }
 
 

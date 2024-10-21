@@ -26,7 +26,7 @@ main {
 }
 
 #formInfo label input {
-    margin-top:5px;
+    margin-top: 5px;
     padding: 10px;
     width: 100%;
     border-radius: 5px;
@@ -49,6 +49,7 @@ fieldset {
     display: block;
     margin-right: 10px;
     padding: 10px 6px;
+    cursor: pointer;
 }
 
 
@@ -124,7 +125,10 @@ textarea {
     padding: 20px 10px;
 }
 
-#NP-M, #Bronze-M, #Silver-M, #Gold-M {
+#NP-M,
+#Bronze-M,
+#Silver-M,
+#Gold-M {
     padding: 2px 10px;
     background-color: var(--primary-color);
     color: white;
@@ -136,10 +140,13 @@ textarea {
     cursor: pointer;
 }
 
-#NP-M:hover, #Bronze-M:hover, #Silver-M:hover, #Gold-M:hover {
+#NP-M:hover,
+#Bronze-M:hover,
+#Silver-M:hover,
+#Gold-M:hover {
     box-shadow: 1px 1px 7px gray;
     /* opacity: .95; */
-    
+
 }
 
 
@@ -150,7 +157,7 @@ textarea {
     padding: 15px;
     color: black;
     width: 90%;
-    height: 25%;
+    /* height: 25%; */
     border-radius: 6px;
     border: none;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -176,7 +183,7 @@ textarea {
 }
 
 .dDesign p {
-    margin-top: 10px;
+    margin: 20px 0;
 }
 
 
@@ -192,8 +199,9 @@ textarea {
         gap: 30px;
         margin-top: 30px;
     }
-    
-    .intro-Heading h1, .intro-Heading p {
+
+    .intro-Heading h1,
+    .intro-Heading p {
         text-align: center;
 
     }
@@ -201,7 +209,7 @@ textarea {
     .dDesign {
         width: 50%;
         height: 25%;
-    
+
     }
 
     .benefits {
