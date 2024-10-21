@@ -1,0 +1,37 @@
+:root {
+    --primary-color: #2a7b48;
+    --secondary-color: #FAEDFC;
+    --accent-color1: #E6E6E6;
+    --accent-color2: #F2F2F2;
+    --accent-color3: #F4F4F4;
+
+    font-family: Outfit, "Humanst521 BT", roboto, sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+#displayApp h1, #displayApp span p {
+    text-align: center;
+}
+
+.infoContainer {
+    display: grid;
+    grid: auto/.6fr 1fr;
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 30px;
+    border: 1px solid lightgray;
+    grid-auto-flow: row;
+
+}
+
+
+#displayApp .sec1 p, #displayApp .sec2 p{
+    padding: 8px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+#displayApp .sec1 {
+    background-color: var(--accent-color2);
+}

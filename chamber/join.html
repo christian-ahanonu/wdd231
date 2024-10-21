@@ -13,9 +13,9 @@
     <meta property="og:description" content="Abuja Chamber of Commerce connecting businesses together">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://christian-ahanonu.github.io/wdd231/chamber/images/homepage-photo.jpeg">
-    <meta property="og:url" content="https://christian-ahanonu.github.io/wdd231/chamber/directory.html">
-    <meta name="twitter:card" content="Abuja Chamber of Commerce, connects and grows businesses.">
-    <title>Directory | Abuja Chambers of Commerce </title>
+    <meta property="og:url" content="https://christian-ahanonu.github.io/wdd231/chamber/index.html">
+    <meta name="twitter:card" content="Abuja Chamber of Commerce connects and grows businesses.">
+    <title>Join | Abuja Chambers of Commerce </title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
@@ -27,10 +27,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css" media="screen">
+    <link rel="stylesheet" href="styles/join.css" media="screen">
     <link rel="stylesheet" href="styles/directory.css" media="screen">
     <link rel="stylesheet" href="styles/directory-large.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script src="scripts/directory.js" defer></script>
+    
+    <script src="scripts/join.js" defer></script>
     <script src="scripts/lastmodified.js" defer></script>
     <script src="scripts/nav.js" defer></script>
 </head>
@@ -61,41 +63,97 @@
 
     <header>
 
-        <section class="nav-container">
+        <div class="nav-container">
             <span>
-                <a href="index.html"><img src="images/acc_logo.svg" alt="Abuja Chambers of Commerce logo" width="180" height="72"></a>
+                <img src="images/acc_logo.svg" alt="Abuja Chambers of Commerce logo" width="180" height="72">
                 <span id="icon-menu"> </span>
             </span>
 
             <nav class="nav-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html" class="active">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
                     <li><a href="#">Discover</a></li>
                 </ul>
             </nav>
-        </section>
-
-    </header>
-
-
-    <main>
-        <section class="intro-msg-container">
-            <p>Abuja Chambers of Commerce was established in 2024 with the vision to build a community where
-                businesses can thrive, foster a community of growth, and contribute to economic development.
-                <br> <br>
-                Find all members of the Abuja Chamber of Commerce below;
-            </p>
-        </section>
-
-        <div class="list-grid-icons">
-            <button id="grid-btn"> <i class="fa fa-th"></i> </button>
-            <button id="list-btn"> <i class="fas fa-list"></i> </button>
         </div>
 
-        <section id="comp-grid"></section>
-        <section id="comp-list"></section>
+    </header> 
+
+    <main>
+
+        <div class="intro-Heading">
+            <h1>Become a Member</h1>
+            <p>Join Abuja Chamber of Commerce to gain access to exclusive events, benefits, and networking opportunities.</p>
+        </div>
+
+        <div id="member-container">
+
+            <form method="get" action="thankyou.html" class="org-details" id="formI">
+                
+                <div id="formInfo">
+                    <label> First Name: <input type="text" title="firstName" name="First" autocomplete="given-name" required></label>
+                    <label> Last Name: <input type="text" title="lastName" name="Last" required autocomplete="family-name" ></label>
+                    <label> Organizational Title: <input type="text" title="orgTitle" name="orgTitle" required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}"></label>
+                    <label> Email Address: <input type="email" title="email address" name="email" required autocomplete="email" placeholder="company@domain.com"></label>
+                    <label> Phone Number: <input type="tel" title="phoneNumber" name="number" required autocomplete="tel" ></label>
+                    <label> Organization Name: <input type="text" title="orgName" name="OrgName" required autocomplete="organization"></label>
+
+                </div>
+                
+                <fieldset id="fieldsetArea">
+                    <legend>Select Membership Level</legend>
+                    <label><input type="radio" name="membershipLevel" value="NP Membership" required> NP Membership</label>
+                    <label><input type="radio" name="membershipLevel" value="Bronze Membership" required> Bronze Membership</label>
+                    <label><input type="radio" name="membershipLevel" value="Silver Membership" required> Silver Membership</label>
+                    <label><input type="radio" name="membershipLevel" value="Gold Membership" required> Gold Membership</label>
+                    
+                </fieldset>
+                
+                <label id="orgDetails"> Organization Description: 
+                    <textarea name="orgDescription" id="orgDescription" title="describe your organization"></textarea>
+                </label>
+                
+                <button id="submit-Btn">Submit Application</button>
+                
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+
+
+            </form>
+
+            
+
+            
+            <div class="benefits">
+                <h2>Membership Levels</h2>
+                <p>Learn more about each membership levels and their benefits</p>
+
+            
+                <div id="NP-M">
+                    <h3>NP</h3>
+                    <p>Learn More!</p>
+                </div>
+
+                <div id="Bronze-M">
+                    <h3>Bronze</h3>
+                    <p>Learn More!</p>
+                </div>
+
+                <div id="Silver-M">
+                    <h3>Silver</h3>
+                    <p>Learn More!</p>
+                </div>
+
+                <div id="Gold-M">
+                    <h3>Gold</h3>
+                    <p>Learn More!</p>
+                </div>
+            </div>
+
+            <dialog id="dsDialogue" class="dDesign"></dialog>
+
+        </div>
 
     </main>
 

@@ -199,28 +199,22 @@ main {
 .courses-container {
     display: flex;
     flex-direction: column;
+    padding: 8px;
+    gap: 10px;
 }
 
 .courses-container span {
     padding: 10px;
-    margin: 5px 0;
     color: white;
     background-color: #5F4723;
     text-align: center;
     border-radius: 3px;
+    cursor: pointer;
 }
 
-.courses-container span:nth-of-type(1),
-.courses-container span:nth-of-type(2),
-.courses-container span:nth-of-type(3),
-.courses-container span:nth-of-type(4),
-.courses-container span:nth-of-type(5) {
+.courses-container .incomplete {
     background-color: #c9b89f;
     color: black;
-}
-
-courses.incomplete {
-    background-color: var(--secondary-color);
 }
 
 .total-credit {
@@ -230,7 +224,27 @@ courses.incomplete {
 }
 
 
+dialog {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
 
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: .5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 
 
@@ -262,14 +276,14 @@ courses.incomplete {
     padding: 3px;
 }
 
-#currentYear, .flag-name {
+#currentYear,
+.flag-name {
     font-size: 1rem;
     font-weight: 600;
 }
 
 .flag-name img {
     width: 30px;
-    /* width: 100%; */
     height: auto;
 }
 

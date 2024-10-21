@@ -80,6 +80,12 @@ a {
 .nav-container span img {
     width: 150px;
     height: auto;
+    /* padding: 5px; */
+}
+
+.nav-container span a {
+    padding: 7px;
+
 }
 
 .nav-container .nav-links {
@@ -95,7 +101,7 @@ a {
 }
 
 .nav-container .nav-links a.active {
-    color: black;
+    text-decoration: 2px white underline;
 }
 
 .nav-container .nav-links ul li {
