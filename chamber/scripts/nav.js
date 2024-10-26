@@ -5,21 +5,3 @@ menuBtn.addEventListener("click", ()=> {
     navLinks.classList.toggle("open");
     menuBtn.classList.toggle("open");
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// navLinks.addEventListener("click", ()=> {
-//     navLinks.classList.active("open");
-// })
-

@@ -7,7 +7,7 @@ const getListBtn = document.querySelector("#list-btn");
 let allCompanies = [];
 
 const url = "data/members.json"
-
+ 
 async function getCompanies() {
     const response = await fetch(url);
     const data = await response.json();
@@ -96,33 +96,3 @@ function displayList(allCompanies) {
         
     });
 }
-
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

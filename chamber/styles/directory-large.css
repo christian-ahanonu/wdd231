@@ -23,7 +23,7 @@
         grid: auto/1fr auto;
     }
 
-    .nav-links {
+    .nav-container .nav-links {
         display: flex;
     }
 
@@ -34,6 +34,7 @@
 
     .nav-container .nav-links {
         background-color: transparent;
+        /* grid-template-rows: 1fr; */
     }
 
     .nav-container .nav-links ul {
@@ -41,6 +42,8 @@
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        gap: 20px;
+
     }
 
     .nav-container .nav-links a {
