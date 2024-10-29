@@ -48,7 +48,8 @@ header,
 /* -----------------MAIN-----------------  */
 
 hr {
-    height: 3px;
+    /* height: 2px; */
+    border: 1px solid lightgray;
     margin: 35px 0;
 }
 
@@ -210,18 +211,17 @@ footer {
 /* -----------------FOOTER END-----------------  */
 
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 380px) {
 
-    .table thead,
-    tbody {
-        padding: 1px;
+    header {
+        margin-top: 0px;
     }
-
+    
     th,
     td {
-        padding: 1px;
+        padding: 10px;
         text-align: center;
-        height: 60px;
+        /* height: 60px; */
     }
 
     .mobile {
@@ -233,6 +233,6 @@ footer {
     }
 
     .foot-nav {
-        font-size: .8rem;
+        font-size: .9rem;
     }
 }
