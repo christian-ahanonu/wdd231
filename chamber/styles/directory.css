@@ -5,10 +5,10 @@
     padding: 0;
     margin: 0;
 }
-
+ 
 :root {
     --primary-color: #2a7b48;
-    --secondary-color: #FAEDFC;
+    --secondary-color: #FAEDFC; 
     --accent-color1: #E6E6E6;
     --accent-color2: #F2F2F2;
     --accent-color3: #F4F4F4;
@@ -142,16 +142,13 @@ a {
     grid-template-rows: 1fr;
 }
 
-#icon-menu {
-    cursor: pointer;
-}
-
 
 #icon-menu::before {
     font-family: "Font Awesome 5 Free";
     content: "\f0c9";
     font-weight: 600;
     font-size: 35px;
+    cursor: pointer;
 }
 
 #icon-menu.open::before {

@@ -13,7 +13,7 @@ const url2 = `https://api.openweathermap.org/data/2.5/forecast?q=Abuja&appid=${k
  
 
  
-
+ 
 async function fetchAbujaData() {
     try {
         const response = await fetch(url);

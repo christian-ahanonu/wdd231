@@ -20,22 +20,18 @@
     
     .nav-container {
         display: grid;
-        grid: auto/1fr auto;
+        grid: auto/1fr 1fr;
     }
 
     .nav-container .nav-links {
         display: flex;
+        background-color: transparent;
     }
 
     #icon-menu {
         display: none;
     }
 
-
-    .nav-container .nav-links {
-        background-color: transparent;
-        /* grid-template-rows: 1fr; */
-    }
 
     .nav-container .nav-links ul {
         display: flex;

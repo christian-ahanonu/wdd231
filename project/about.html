@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://christian-ahanonu.github.io/wdd231/project/images/homepage-photo.jpeg">
     <meta property="og:url" content="https://christian-ahanonu.github.io/wdd231/project/index.html">
     <meta name="twitter:card" content="Finder - The joy of exploration">
-    <title>Homepage | Finder</title>
+    <title>About | Finder</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
@@ -29,23 +29,17 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css" media="screen">
+    <link rel="stylesheet" href="styles/about.css" media="screen">
     <link rel="stylesheet" href="styles/index.css" media="screen">
-    <link rel="stylesheet" href="styles/event.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
-    <script src="scripts/index.js" defer></script>
-    <script src="scripts/nav-foot.js" defer></script>
-    <script type="module" src="scripts/greetingMsg.js" defer></script>
 
+    <script src="scripts/nav-foot.js" defer></script>
 
 </head>
 
 <body>
 
     <header>
-        
-        <div class="grtContainer"> </div>
-
 
         <section class="nav-container">
 
@@ -56,9 +50,9 @@
 
             <nav class="nav-links">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="event.html">Event</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                 </ul>
             </nav>
 
@@ -67,49 +61,65 @@
     </header>
 
     <main>
-
-        <section id="hero-container">
-
-            <div class="pic-src">
+        <section class="about-container">
+            
+            <div class="about-hero-msg">
                 <picture>
-                    <source srcset="images/hero-image.jpg" media="(min-width: 1000px)">
-                    <img src="images/hero-image-small.jpg" alt="Hero image" width="463" height="618">
+                    <source srcset="images/about-image.jpg" media="(min-width: 1000px)">
+                    <img src="images/about-image-small.jpg" alt="About hero image">
                 </picture>
-
-
-                <div class="hero-msg">
-                    <h1>Connecting people to places, events, 
-                        <br>and the joy of exploration..
-                    </h1>
-        
-                    <button>Join us</button>
-                </div>
-
+                
+                <h1> Bringing the world together through live experiences. </h1>
             </div>
-
-
-        </section> 
-
-        <section class="all-events"> 
-            <h2>Upcoming Events</h2>
-
-            <div class="event-container">
-
-            </div>
-
-            <a href="event.html" class="toEvent">
-                <button type="button" class="new-btn">More events ➡</button>
-            </a>
 
         </section>
 
-        <dialog class="moreInfoWrapper"> </dialog>
 
+        <section class="about-msg">
+            <p>
+                Finder is a global event platform for live experiences 
+                that allows anyone to find and attend events that fuel their 
+                passions and enrich their lives. From music festivals, marathons, conferences, 
+                community rallies, and fundraisers, to gaming competitions and air guitar contests. 
+                Our mission is to connect people to places, events, and the joy of exploration.
+            </p>
+        </section>
 
-        
+        <section class="join-container">
+            <h2>Join Finder</h2>
+
+            <div class="join-child">
+
+                <form action="thankyou.html" id="finder-form">
+    
+                    <label> First Name: 
+                        <input type="text" title="firstName" name="First" autocomplete="given-name" required>
+                    </label>
+                    
+                    <label> Last Name: 
+                        <input type="text" title="lastName" name="Last" autocomplete="family-name" required>
+                    </label>
+
+                    <label> Email Address: 
+                        <input type="email" title="email address" name="email" autocomplete="email" placeholder="someone@domain.com" required>
+                    </label>
+
+                    <label> Phone Number: 
+                        <input type="tel" title="phoneNumber" name="mobile number" autocomplete="tel" required >
+                    </label>
+                    
+                    <button type="submit" id="submit-btn"> Join in </button>
+    
+                </form>
+    
+                <div class="joinIn">
+                    <img src="images/hand.png" alt="join finder" loading="lazy">
+                </div>
+            </div>
+
+        </section>
 
     </main>
-
 
     <footer>
         <div class="footer-background">
@@ -130,7 +140,6 @@
                     <li>FAQs</li>
                     <li>Local Guide</li>
                 </ul>
-                
                 
                 <ul class="sec-three">
                     <li> Connect with us</li>
@@ -153,8 +162,7 @@
             </div>
 
         </div>
-
-
+        
     </footer>
 
 </body>
