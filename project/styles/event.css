@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-=======
-/* position: relative;
-padding-top: 62px;
-height: 85vh;
-background: url(https://eventbrite-s3.s3.amazonaws.com/marketing/landingpages/assets/About-Header.jpg) center center no-repeat;
-background-size: cover;
-} */
 
->>>>>>> 9ee97b169ac6b2d9c6c2d23cda952add9d3f7bce
 :root {
     --primary-color: #EC7C13;
     --secondary-color: #0C7064;
@@ -32,7 +23,7 @@ background-size: cover;
 
     padding: 15px;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url(/images/event_hero.jpg) center center no-repeat;
+                url(images/event_hero.jpg) center center no-repeat;
     background-size: cover;
     position: relative;
     height: 500px;
