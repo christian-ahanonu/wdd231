@@ -50,7 +50,7 @@ a {
 }
 
 .logo-container img {
-    width: 100px;
+    width: 90px;
     height: 80px;
 }
 
@@ -336,6 +336,11 @@ footer {
     .hero-msg h1 {
         font-size: 2rem;
     }
+
+    /* .logo-container img {
+        height: auto;
+        width: 80px;
+    } */
 
     .toEvent {
         margin-right: auto;
