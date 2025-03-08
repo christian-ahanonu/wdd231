@@ -261,19 +261,21 @@ dialog button {
     padding: 13px;
     font-family: Raleway, sans-serif;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
 }
 
-#currentYear {
-    display: block;
-    padding: 2px;
-}
 
 .flag-name {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     gap: 5px;
     text-align: center;
     padding: 3px;
+    align-items: center;
 }
 
 #currentYear,
@@ -283,12 +285,11 @@ dialog button {
 }
 
 .flag-name img {
-    width: 30px;
-    height: auto;
+    width: 50px;
+    height: 30px;
 }
 
 
 #lastModified {
-    padding-top: 14px;
     font-weight: 600;
 }

@@ -135,7 +135,6 @@ input {
 
     .join-child {
         flex-direction: row;
-        /* justify-content: space-between; */
         gap: 60px;
         align-items: center;
     } 

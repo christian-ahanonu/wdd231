@@ -84,6 +84,7 @@ const totalCredit = document.querySelector(".total-credit");
 
 displayCourses(courses)
 
+// Displays courses based on the filter
 function displayCourses(filterCourse) {
     coursesContent.innerHTML = "";
 
@@ -109,9 +110,7 @@ function displayCourses(filterCourse) {
 };
 
 
-
-
-
+// Dialog that displays course details 
 function displayCourseDetails(course) {
     const courseDetails = document.querySelector("#course-details");
     courseDetails.innerHTML = '';
@@ -133,15 +132,8 @@ function displayCourseDetails(course) {
         });
 }
         
-
-
-
-
-
-
-
-
-
+ 
+// Event listeners for the filter buttons
 const allCourse = document.querySelector(".all-course").addEventListener("click", ()=> {
     displayCourses(courses);
 });
