@@ -153,10 +153,13 @@ a {
 
 
 
+.intro-msg-container h1 {
+    margin-top: 0;
+}
+
 .intro-msg-container {
     padding: 20px;
 }
-
 
 
 
