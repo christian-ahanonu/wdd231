@@ -9,8 +9,8 @@ let allCompanies = [];
 const url = "data/members.json"
  
 async function getCompanies() {
-    const response = await fetch(url);
-    const data = await response.json();
+    const response = await fetch(url); // fetch data from the url
+    const data = await response.json(); // convert the data to json
     allCompanies = data.companies;
 
     displayGrid(allCompanies)
@@ -18,18 +18,6 @@ async function getCompanies() {
 
 }
 getCompanies();
-
-// Show grid
-getGridBtn.addEventListener("click", () => {
-    getCompanyList.style.display = "none";
-    getCompanyGrid.style.display = "grid";
-});
-
-// Show list
-getListBtn.addEventListener("click", () => {    
-    getCompanyGrid.style.display = "none";
-    getCompanyList.style.display = "grid";
-});
 
 
 
@@ -41,31 +29,24 @@ function displayGrid(allCompanies) {
     allCompanies.forEach(allCompany => {
         let container = document.createElement("div");
         container.setAttribute("style", "width: 100%; height: 292px;");
-        // container.classList.add(".show-grid");
 
-        let companyName = document.createElement("h1");
-        let address= document.createElement("p");
-        let phoneNo = document.createElement("p");
-        let webAddress = document.createElement("a");
-
-        companyName.textContent = allCompany.name;
-        address.textContent = allCompany.address;
-        phoneNo.textContent = allCompany.phoneNumbers;
-        webAddress.textContent = allCompany.websitesUrls;
-        webAddress.setAttribute("href", `${allCompany.webAddress}`);
-        webAddress.textContent = `Visit Site`;
-        webAddress.setAttribute("target", "_blank");
-        webAddress.setAttribute("style", "color:#319155;");
-        
-        container.appendChild(companyName);
-        container.appendChild(address);
-        container.appendChild(phoneNo);
-        container.appendChild(webAddress);
-        
-        getCompanyGrid.appendChild(container);
-        
+        container.innerHTML = `
+            <h1>${allCompany.name}</h1>
+            <p>${allCompany.address}</p>
+            <p>${allCompany.phoneNumbers}</p>
+            <a href="${allCompany.webAddress}" target="_blank" style="color:#2a7b48;">Visit Site</a>
+        `
+        getCompanyGrid.appendChild(container);        
     });
 }
+
+// Show grid
+getGridBtn.addEventListener("click", () => {
+    getCompanyList.style.display = "none";
+    getCompanyGrid.style.display = "grid";
+});
+
+
 
 
 // Build and display list view
@@ -77,22 +58,19 @@ function displayList(allCompanies) {
         let table = document.createElement("div");
         table.classList.add("table-list");
 
-        let name = document.createElement("div");
-        let address = document.createElement("div");
-        let phoneNumbers = document.createElement("div");
-        let websitesUrls = document.createElement("div");
-
-        name.textContent = allCompany.name;
-        address.textContent = allCompany.address;
-        phoneNumbers.textContent = allCompany.phoneNumbers;
-        websitesUrls.textContent = allCompany.websitesUrls;
-
-        table.appendChild(name);
-        table.appendChild(address);
-        table.appendChild(phoneNumbers);
-        table.appendChild(websitesUrls);
-
+        table.innerHTML = `
+            <div>${allCompany.name}</div>
+            <div>${allCompany.address}</div>
+            <div>${allCompany.phoneNumbers}</div>
+            <div>${allCompany.websitesUrls}</div>
+        `
         getCompanyList.appendChild(table);
         
     });
 }
+
+// Show list
+getListBtn.addEventListener("click", () => {    
+    getCompanyGrid.style.display = "none";
+    getCompanyList.style.display = "grid";
+});

@@ -81,8 +81,11 @@ a {
     height: auto;
 }
 
-.nav-container span a {
+.nav-container > span a {
     padding: 7px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
 }
 
@@ -118,14 +121,6 @@ a {
 
 
 /* Styling for the nav display */
-/* .nav-links {
-    display: none;
-}
-
-.nav-links.open {
-    display: block;
-
-} */
 
 .nav-container nav {
     display: grid;
@@ -197,9 +192,7 @@ a {
 
 
 /* Grrid and List view styling  */
-#comp-list .table-list:nth-of-type(2),
-#comp-list .table-list:nth-of-type(4),
-#comp-list .table-list:nth-of-type(6) {
+#comp-list .table-list:nth-of-type(even){
     background-color: var(--secondary-color);
 }
 
@@ -221,6 +214,8 @@ a {
 
 #comp-grid div {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     border: .5px solid var(--primary-color);
     padding: 50px;
     border-radius: 5px;
@@ -231,8 +226,8 @@ a {
     color: var(--primary-color);
 }
 
+/*class created in JS*/
 .table-list {
-    /*class created in JS*/
     display: grid;
     grid: auto/1fr;
     gap: 10px;
@@ -246,6 +241,7 @@ a {
 
 footer {
     margin-top: 50px;
+    width: 100%;
 }
 
 .footer-background {
@@ -258,6 +254,12 @@ footer {
     row-gap: 20px;
     color: white;
     padding: 20px;
+    width: 100%;
+}
+
+.footer-container .sec-two {
+    display: flex;
+    gap: 7px;
 }
 
 .footer-container .sec-two i {
@@ -267,11 +269,12 @@ footer {
 .footend-container {
     background-color: black;
     color: white;
-
+    width: 100%;
 }
 
 .footer-end {
     padding: 20px;
+    width: 100%;
 }
 
 .sec-one a {

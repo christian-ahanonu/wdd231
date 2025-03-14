@@ -254,9 +254,8 @@ dialog button {
 
 
 .footer-nav {
-    height: 110px;
     margin-top: 20px;
-    background-color: #5F4723;
+    background-color: var(--secondary-color);
     color: white;
     padding: 13px;
     font-family: Raleway, sans-serif;
