@@ -71,6 +71,7 @@
 
 #home-container .events p {
     padding: 15px;
+    line-height: 2;
 }
 
 
@@ -139,18 +140,21 @@
 
 @media screen and (min-width: 1000px) {
 
+    .home,
+    #home-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
     #hero-container {
         height: 600px;
     }
 
     .home {
-        max-width: 1200px;
         margin: 20px auto;
     }
 
     #home-container {
-        max-width: 1200px;
-        margin: 0 auto;
         grid: 1fr/1.7fr 1fr 1fr;
     }
     

@@ -15,3 +15,4 @@ document.addEventListener('DOMContentLoaded', () => {
         grtContainer.classList.add('hide');
     }, 4000); // Duration of the animation (3 seconds)
 });
+ 

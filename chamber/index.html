@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="styles/directory-large.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/index.js" type="module" defer></script>
     <script src="scripts/lastmodified.js" defer></script>
     <script src="scripts/nav.js" defer></script>
 </head>
@@ -45,9 +45,7 @@
                 <li> <i class="fa-brands fa-facebook"></i> </li>
                 <li> <i class="fa-brands fa-twitter"></i> </li>
                 <li> <i class="fa-brands fa-linkedin"></i> </li>
-                <li>
-                    <p>(+234) 817-362-0785</p>
-                </li>
+                <li> (+234) 817-362-0785 </li>
             </ul>
         </nav>
 
@@ -63,28 +61,31 @@
 
     <header>
 
-        <div class="nav-container">
+        <section class="nav-container">
             <span>
-                <img src="images/acc_logo.png" alt="Abuja Chambers of Commerce logo" width="180" height="72">
+                <a href="index.html"> 
+                    <img src="images/acc_logo.svg" alt="Abuja Chambers of Commerce logo">
+                </a>
+
                 <span id="icon-menu"> </span>
             </span>
 
             <nav class="nav-links">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
                     <li><a href="discover.html">Discover</a></li>
                 </ul>
             </nav>
-        </div>
+        </section>
 
-    </header> 
+    </header>
 
 
     <main>
         <div id="hero-container">
-            <a href="index.html"> <img src="images/homepage-photo.jpg" alt="home page hero image" width="300" height="300"> </a>
+            <img src="images/homepage-photo.jpg" alt="home page hero image" loading="lazy">
             <span tabindex="0">Keynote Ticket</span>
         </div>
 
@@ -95,7 +96,7 @@
             <div class="events">
                 <h3>Events</h3>
                 <p> <strong>Abuja Networking Conference</strong>
-                    <br> <strong>Date:</strong> 28th October 2024
+                    <br> <strong>Date:</strong> 28th April 2025
                     <br> <strong>Time:</strong> 4pm
                     <br> <strong>Venue:</strong> Transcorp Hilton, Abuja. 
 
@@ -120,36 +121,15 @@
             <div class="wForecast">
                 <h3>Weather Forecast</h3>
 
-                <ul class="forecastInfo">
+                <div class="forecastInfo">
 
-                </ul>
-
-                <p class="see"></p>
+                </div>
 
             </div>
 
         </div>
 
         <div id="companies-container">
-
-            <!-- <div class="showCompanies"> -->
-
-                <!-- <div class="comp-heading">
-                    <h2>Achiv's Production</h2>
-                    <p>See the world through my lens!</p>
-                </div>
-
-                <div class="companyInfo">
-                    <p>Email: achivproduction@gmail.com</p>
-                    <p>Phone: 123-456-7890</p>
-                    <p>URL: https://achivsproduction.com/</p>
-                </div> -->
-
-            <!-- </div> -->
-
-            <!-- <div>Company B</div>
-
-            <div>Company C</div> -->
 
         </div>
 

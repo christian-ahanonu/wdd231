@@ -1,4 +1,3 @@
-const getCompanyGrid = document.querySelector("#comp-grid");
 const getCompanyList = document.querySelector("#comp-list");
 
 const getGridBtn = document.querySelector("#grid-btn");
@@ -24,6 +23,7 @@ getCompanies();
 
 // Build and display grid view
 function displayGrid(allCompanies) {
+    const getCompanyGrid = document.querySelector("#comp-grid");
     getCompanyGrid.innerHTML = "";
     
     allCompanies.forEach(allCompany => {

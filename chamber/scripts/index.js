@@ -1,7 +1,5 @@
 const weatherInfoContainer = document.querySelector('.weatherInfo-container');
-const weatherIcon = document.querySelector('#weather-icon');
-const weatherInfo = document.querySelector('.weather-info');
-const forecastInfo = document.querySelector('.forecastInfo');
+import { fisherYatesShuffle } from './module.js';
 
 // 9.054071295619162, 7.497245344173042
 
@@ -31,49 +29,24 @@ async function fetchAbujaData() {
     };
     
     
-    
-    
     function displayResults(data) {
         //weather icon
+        const weatherIcon = document.querySelector('#weather-icon');
         weatherIcon.innerHTML = `${data.weather[0].icon}`;
         weatherIcon.setAttribute('src', 'https://openweathermap.org/img/wn/10n@2x.png');
 
 
-        //build other weather info
-        weatherInfo.innerHTML = "";
-
-        let listElement1 = document.createElement('li');
-        listElement1.innerHTML = `${data.main.temp}&deg;C`;
-
-        let listElement2 = document.createElement('li');
-        listElement2.style.textTransform = "capitalize";
-        listElement2.innerHTML = `${data.weather[0].description}`
-
-        let listElement3 = document.createElement('li');
-        listElement3.innerHTML = `High: ${data.main.temp_max}&deg;`
-        
-        let listElement4 = document.createElement('li');
-        listElement4.innerHTML = `Low: ${data.main.temp_min}&deg;`
-
-        let listElement5 = document.createElement('li');
-        listElement5.innerHTML = `Humidity: ${data.main.humidity}%`
-        
-
-        let sunrise = data.sys.sunrise; 
-        let sunset = data.sys.sunset;
-
-        let convertSunrise = new Date(sunrise * 1000).toLocaleTimeString();
-        let convertSunset = new Date(sunset * 1000).toLocaleTimeString();
-        
-        let listElement6 = document.createElement('li');
-        listElement6.innerHTML = `Sunrise: ${convertSunrise}`
-        
-        let listElement7 = document.createElement('li');
-        listElement7.innerHTML = `Sunset: ${convertSunset}`;
-
-        
-        weatherInfo.append(listElement1, listElement2, listElement3, listElement4, listElement5, listElement6, listElement7);
-
+        //build other weather info like temp, description, humidity, sunrise, sunset
+        document.querySelector('.weather-info').innerHTML =
+        `
+            <li>${data.main.temp}&deg;C</li>
+            <li>${data.weather[0].description.replace(/\b\w/g, char => char.toUpperCase())}</li>
+            <li>High: ${data.main.temp_max}&deg;</li>
+            <li>Low: ${data.main.temp_min}&deg;</li>
+            <li>Humidity: ${data.main.humidity}%</li>
+            <li>Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</li>
+            <li>Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</li>
+        `
     }
 }
 
@@ -87,7 +60,7 @@ fetchAbujaData();
 
 
 
-
+// Three day weather forecast
 async function getWeatherForecast() {
     try {
         const response = await fetch(url2);
@@ -97,31 +70,45 @@ async function getWeatherForecast() {
         }
 
         const data2 = await response.json();
-        console.log(data2);
-        displayWeatherForcast(data2);
+        // console.log(data2);
+
+        // Call the function to display the forecast
+        displayWeatherForecast(data2);
 
     } catch (error) {
         console.log(error);
     }
 
 
-    function displayWeatherForcast(data2){
+
+    function displayWeatherForecast(data2) {
+        // Clear the forecast container
+        const forecastInfo = document.querySelector('.forecastInfo');
         forecastInfo.innerHTML = '';
-
-        let todayInfo = document.createElement('li');
-        let tueInfo = document.createElement('li');
-        let wedInfo = document.createElement('li');
-
-        todayInfo.innerHTML = `Today: ${data2.list[1].main.temp}°C`;
-        tueInfo.innerHTML = `Tuesday: ${data2.list[2].main.temp}°C`;
-        wedInfo.innerHTML = `Wednesday: ${data2.list[3].main.temp}°C`;
-        
-        forecastInfo.append(todayInfo, tueInfo, wedInfo);        
-    }
     
-}
+        // Extract the forecast for the next three days
+        const forecastDays = [1, 9, 17]; // Indices for 3-hour intervals (approx. 24 hours apart)
+        forecastDays.forEach((index, i) => {
+            const dayName = new Date(data2.list[index].dt * 1000).toLocaleDateString('en-US', { weekday: 'long' });
+            const temp = data2.list[index].main.temp;
+    
+            // Create a list item for each day's forecast
+            const dayInfo = document.createElement('p');
+            dayInfo.innerHTML = `${dayName}: ${temp.toFixed(1)}°C`;
+    
+            forecastInfo.appendChild(dayInfo);
+        });
+    
+    }
 
+}
+// Call the function to fetch and display the forecast
 getWeatherForecast();
+
+
+
+
+
 
 
 
@@ -150,49 +137,45 @@ async function getMembers() {
 
     function displayMembers(allCompanies) {
 
-        // filters to return gold or silver       
+        // filters to return gold or silver members      
         let filterMembers = allCompanies.filter(company => {
             const membership =  company.membershipLevels[0];
             return membership.silver || membership.gold;
         })
+
+        // Use the fisherYatesShuffle function to shuffle the members
+        let shuffledMembers = fisherYatesShuffle(filterMembers);
         
         // randomly select three members with either gold or silver membership
-        let randomMembers = filterMembers.sort(() => 0.5 - Math.random()).slice(0, 3);
+        let randomMembers = shuffledMembers.slice(0, 3);
         
         randomMembers.forEach(company => {
+            // Check if the company is silver or gold
             const membership = company.membershipLevels[0].silver ? 'Silver 🥈' : 'Gold 🥇'
             
             const showCompanies = document.createElement('div');
             showCompanies.classList.add('showCompanies');
 
-            showCompanies.innerHTML =
-            `
-            <div class="showCompanies">
+            showCompanies.innerHTML = `
+                <div class="showCompanies">
 
-                <div class="comp-heading">
-                    <h2>${company.name}</h2>
-                    <p>${company.tagLine}</p>
+                    <div class="comp-heading">
+                        <h2>${company.name}</h2>
+                        <p>${company.tagLine}</p>
+                    </div>
+
+                    <div class="companyInfo">
+                        <p>Phone: ${company.phoneNumbers}</p>
+                        <p>Website: <a href="${company.websitesUrls}" >${company.websitesUrls}</a> </p>
+                        <p>Membership: ${membership}</p>
+                    </div>
+    
                 </div>
-
-                <div class="companyInfo">
-                    <p>Phone: ${company.phoneNumbers}</p>
-                    <p>Website: <a href="${company.websitesUrls}" >${company.websitesUrls}</a> </p>
-                    <p>Membership: ${membership}</p>
-                </div>
-
-            </div>
-
             `;
 
             companiesContainer.appendChild(showCompanies);
         });
-        
-        
-
-
-
-
-        
+                
     }
 
 }
