@@ -90,30 +90,27 @@ a {
 }
 
 
-
-.nav-container .nav-links {
+.nav-links {
     text-align: center;
     background-color: var(--primary-color);
 }
 
-.nav-container .nav-links a {
+.nav-links a {
     color: white;
     padding: 8px 12px;
     border-radius: 20px;
 }
 
-.nav-container .nav-links a.active {
+.nav-links a.active {
     text-decoration: 2px white underline;
 }
 
-.nav-container .nav-links ul li {
+.nav-links ul li {
     padding: 5px 0px;
     margin: 13px 0;
 }
 
-
-
-.nav-container .nav-links a:hover {
+.nav-links a:hover {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     transition: .5s ease;
