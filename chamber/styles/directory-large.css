@@ -93,13 +93,19 @@
         padding-top: 5%
     }
 
-    .footer-container .sec-two i {
+    .sec-two {
+        width: 0;
+        height: 0;
+        justify-content: center;
+    }
+
+    .sec-two i {
         font-size: 44px;
         padding-right: 8px
     }
 
     .footer-end {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between
     }
 

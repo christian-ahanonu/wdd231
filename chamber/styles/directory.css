@@ -258,18 +258,15 @@ footer {
     padding: 20px;
 }
 
-.footer-container .sec-two {
+.sec-two {
     display: flex;
     gap: 7px;
-}
-
-.footer-container .sec-two i {
-    font-size: 30px;
-}
-
-.sec-two {
     width: 320px;
     height: 30px;
+}
+
+.sec-two i {
+    font-size: 30px;
 }
 
 .sec-one a {
