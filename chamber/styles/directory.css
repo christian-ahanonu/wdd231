@@ -54,16 +54,17 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 15px 13px;
+    margin-bottom: 10px;
 
 }
 
 .nav-container > span a {
-    /* padding: 7px; */
     width: 150px;
     height: 59px;
 }
 
 .nav-container > span img {
+    /* padding: 10px; */
     width: 100%;
     height: 100%;
     object-fit: cover;

@@ -109,10 +109,6 @@
     border-radius: 0 0 10px 10px;
 }
 
-/* .att-img-container .ptag {
-    visibility: hidden;
-} */
-
 .att-img-container .ptag:hover {
     visibility: visible;
     cursor: pointer;
@@ -198,16 +194,104 @@
 
 
 
+/* abuja activities */
+main > h1 {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 1.6rem;
+}
+
+.tryData {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+}
+
+.activity button {
+    padding: 15px;
+    background-color: #2a7b48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.activity {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #F4F4F4;
+    padding: 15px;
+    display: grid;
+    grid-template-areas: 
+    "image" 
+    "name"
+    "desc"
+    "address"
+    "cost"
+    "button";
+    gap: 20px;
+}
+
+.activity > img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
 
 
 
+@media screen and (min-width: 641px) {
+    .activity {
+        
+        grid-template-areas: 
+        "name name"
+        "image desc"
+        "image address"
+        "image cost"
+        "button button";
+    }
 
+    .activity > img {
+        grid-area: image;
+    }
 
+    .activity > h2 {
+        grid-area: name;
+        color: var(--primary-color);
+    }
 
+    .activity > p {
+        grid-area: desc;
+    }
+
+    .activity > address {
+        grid-area: address;
+    }
+    
+    .activity > p:nth-of-type(2) {
+        grid-area: cost;
+    }
+
+    .activity > button {
+        grid-area: button;
+    }
+}
+    .activity > button:hover {
+        cursor: pointer;
+    }
 
 
 
 @media screen and (min-width: 1000px){
+
+    #discover-container, 
+    .tryData {
+
+        max-width: 1200px;
+        margin: 0 auto;
+    }
     
     #discover-container {
         max-width: 1200px;
@@ -222,5 +306,25 @@
     .places {
         margin: 0;
         padding-bottom: 20px;
+    }
+
+    .tryData {
+        grid: auto/1fr 1fr;
+        gap: 20px;
+    }
+
+
+    .activity {
+        box-shadow: 0px 0px 6px rgb(79, 79, 79, .3);
+    }
+
+    .activity:hover {
+        transform: scale(1.02);
+        transition: .3s ease;
+    }
+    
+    .activity img:hover {
+        transform: scale(1.05);
+        transition: .3s ease;
     }
 }

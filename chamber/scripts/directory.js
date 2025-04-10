@@ -1,4 +1,6 @@
+const getCompanyGrid = document.querySelector("#comp-grid");
 const getCompanyList = document.querySelector("#comp-list");
+
 
 const getGridBtn = document.querySelector("#grid-btn");
 const getListBtn = document.querySelector("#list-btn");
@@ -21,9 +23,15 @@ getCompanies();
 
 
 
+// Show grid
+getGridBtn.addEventListener("click", () => {
+    getCompanyList.style.display = "none";
+    getCompanyGrid.style.display = "grid";
+});
+
+
 // Build and display grid view
 function displayGrid(allCompanies) {
-    const getCompanyGrid = document.querySelector("#comp-grid");
     getCompanyGrid.innerHTML = "";
     
     allCompanies.forEach(allCompany => {
@@ -40,14 +48,14 @@ function displayGrid(allCompanies) {
     });
 }
 
-// Show grid
-getGridBtn.addEventListener("click", () => {
-    getCompanyList.style.display = "none";
-    getCompanyGrid.style.display = "grid";
+
+
+
+// Show list
+getListBtn.addEventListener("click", () => {    
+    getCompanyGrid.style.display = "none";
+    getCompanyList.style.display = "grid";
 });
-
-
-
 
 // Build and display list view
 function displayList(allCompanies) {
@@ -69,8 +77,4 @@ function displayList(allCompanies) {
     });
 }
 
-// Show list
-getListBtn.addEventListener("click", () => {    
-    getCompanyGrid.style.display = "none";
-    getCompanyList.style.display = "grid";
-});
+
