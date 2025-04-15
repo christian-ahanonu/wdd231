@@ -55,7 +55,6 @@ header,
 /* -----------------MAIN-----------------  */
 
 hr {
-    /* height: 2px; */
     border: 1px solid lightgray;
     margin: 35px 0;
 }
@@ -219,16 +218,11 @@ footer {
 
 
 @media screen and (min-width: 380px) {
-
-    /* header {
-        margin-top: 0;
-    } */
     
     th,
     td {
         padding: 10px;
         text-align: center;
-        /* height: 60px; */
     }
 
     .mobile {
