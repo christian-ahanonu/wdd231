@@ -339,6 +339,10 @@ footer {
         font-size: 2rem;
     }
 
+    .hero-msg > button a {
+        color: white;
+    }
+
 
     .toEvent {
         margin-right: auto;
