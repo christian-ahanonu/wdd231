@@ -30,5 +30,3 @@ class DisplayGreeting2 {
 }
 
 export { DisplayGreeting2 };
-
-

@@ -1,5 +1,5 @@
 const displayAllEvents = document.querySelector('.dsAllEvents');
-let moreInfoWrapper = document.querySelector('.moreInfoWrapper');
+const moreInfoWrapper = document.querySelector('.moreInfoWrapper');
 
 const key = 'SGAsgKjftKVJvlQdkQCsXnLgAukjz16E';
 const url = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=CA&stateCode=ON&size=20&apikey=${key}`;
@@ -36,7 +36,7 @@ function displayEvents(data) {
         // Event structure
         eventItem.innerHTML = `
             <div> 
-                <img src="${event.images[3].url}" alt="event image" width="${event.images[3].width}" height="${event.images[3].height}" loading="lazy"> 
+                <img src="${event.images[3].url}" alt="${event.name}" width="${event.images[3].width}" height="${event.images[3].height}" loading="lazy"> 
             </div>
 
             <ul>

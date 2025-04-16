@@ -1,5 +1,5 @@
 const eventContainer = document.querySelector('.event-container');
-let moreInfoWrapper = document.querySelector('.moreInfoWrapper')
+const moreInfoWrapper = document.querySelector('.moreInfoWrapper')
 
 const key = 'SGAsgKjftKVJvlQdkQCsXnLgAukjz16E';
 const url = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=CA&stateCode=ON&size=20&apikey=${key}`;
@@ -29,13 +29,13 @@ async function fetchCanadaEventData() {
 fetchCanadaEventData();
 
 
+
 // Display events
 function buildEvent(data) {
 
     eventContainer.innerHTML = '';
 
-    const topFourEvent = data
-    .map(value => ({ value, sort: Math.random() }))
+    const topFourEvent = data.map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
     .slice(0, 4);
@@ -48,7 +48,7 @@ function buildEvent(data) {
         // Event structure
         eachCont.innerHTML = `
             <div> 
-                <img src="${event.images[3].url}" alt="event image" width="${event.images[3].width}" height="${event.images[3].height}" loading="lazy"> 
+                <img src="${event.images[3].url}" alt="${event.name}" width="${event.images[3].width}" height="${event.images[3].height}" loading="lazy"> 
             </div>
     
             <ul>

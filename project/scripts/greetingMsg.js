@@ -1,6 +1,5 @@
 import { DisplayGreeting2 } from "./module.js";
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const display = new DisplayGreeting2();
     const grtContainer = document.querySelector('.grtContainer');
@@ -13,6 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Remove the 'show' class after the animation ends
     setTimeout(() => {
         grtContainer.classList.add('hide');
-    }, 4000); // Duration of the animation (3 seconds)
+    }, 4000); // Duration of the animation (4 seconds)
 });
- 
